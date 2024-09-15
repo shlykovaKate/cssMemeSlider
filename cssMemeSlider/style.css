@@ -144,3 +144,9 @@ label:active .control {
         width: 100%;
     }
 }
+
+@media screen and (max-width: 320px) {
+    .wrapper {
+        width: 90%;
+    }
+}
