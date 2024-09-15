@@ -1,0 +1,89 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    padding: 1.5%;
+    width: 68.36%;
+    margin: 0 auto;
+    background-color: #25282A;
+    color: #FFFFFF;
+}
+
+.slider {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.slider_wrapper {
+    background-color: #FAFAFA;
+    overflow: hidden;
+}
+
+.content_controls, .slider_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.controls {
+    display: flex;
+}
+
+.pets_img {
+    width: 100%;
+    appearance: unset;    
+    height: 0;
+    overflow: hidden;
+    margin-left: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    transition: margin-left 0.3s;
+}
+
+.pets_img:checked {
+    margin-left: 0;
+    height: 70vh;
+    transition: margin-left 0.3s;
+}
+
+.pets_img#img1 {
+    background-image: url('./assets/img/pets-jennifer.jpg');
+}
+
+.pets_img#img2 {
+    background-image: url('./assets/img/pets-timmy.jpg');
+}
+
+.pets_img#img3 {
+    background-image: url('./assets/img/pets-scarlett.jpg');
+}
+
+.pets_img#img4 {
+    background-image: url('./assets/img/pets-freddie.jpg');
+}
+
+.pets_text {
+    height: 0;
+    overflow: hidden;
+    margin-left: 20%;
+    transition: 0.2s;
+}
+
+.slider_wrapper:has(#img1:checked) + .content_controls .pets_text:nth-child(1),
+.slider_wrapper:has(#img2:checked) + .content_controls .pets_text:nth-child(2),
+.slider_wrapper:has(#img3:checked) + .content_controls .pets_text:nth-child(3),
+.slider_wrapper:has(#img4:checked) + .content_controls .pets_text:nth-child(4) {
+    margin-left: 0;
+    height: auto;
+    transition: 0.2s;
+}
