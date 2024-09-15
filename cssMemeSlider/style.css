@@ -132,3 +132,15 @@ label:active .control {
     height: auto;
     transition: 0.2s;
 }
+
+@media screen and (max-width: 767px) {
+    .content_controls {
+        flex-direction: column-reverse;
+        padding-top: 4%;
+    }
+
+    .content {
+        padding: 0.5em 0 2em;
+        width: 100%;
+    }
+}
